@@ -1,3 +1,5 @@
+@echo off
+
 REM Source of inspiration: https://github.com/api0cradle/LOLBAS/tree/master/OSBinaries
 REM Source of inspiration: https://attack.mitre.org/wiki/Main_Page
 REM Source of inspiration: https://github.com/danielbohannon/Invoke-CradleCrafter
@@ -94,7 +96,7 @@ REM			- "LOLBAS" to test LOLBAS PAYLOADS
 REM			- "DOSfuscation" to test Invoke-DOSfuscation PAYLOADS
 REM			- "CradleCrafter" to test Invoke-CradleCrafter PAYLOADS
 
-set /P test_type="Choose the framework used to run the tests (type "ATT&CK", "LOLBAS", "DOSfuscation" or "CradleCrafter"): "
+set /P test_type="Choose the framework used to run the tests (type 'ATT&CK', 'LOLBAS', 'DOSfuscation' or 'CradleCrafter'): "
 
 2>nul call :CASE_%test_type%
 if errorlevel 1 call :DEFAULT_CASE
